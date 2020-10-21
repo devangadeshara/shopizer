@@ -47,8 +47,7 @@ public class MerchantLog extends SalesManagerEntity<Long, MerchantLog> implement
 	private String module;
 	
 
-	@Column(name="LOG")
-	@Type(type = "org.hibernate.type.TextType")
+	@Column(name="LOG", length=4000)
 	private String log;
 	
 	public MerchantLog(MerchantStore store, String log) {

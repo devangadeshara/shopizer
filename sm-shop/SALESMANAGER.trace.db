@@ -57,3 +57,6 @@ update SALESMANAGER.CATEGORY set LINEAGE = "/1" where CATEGORY_ID = 1 [42122-191
 	at net.sourceforge.squirrel_sql.client.session.SQLExecuterTask.run(SQLExecuterTask.java:212)
 	at net.sourceforge.squirrel_sql.fw.util.TaskExecuter.run(TaskExecuter.java:82)
 	at java.lang.Thread.run(Thread.java:745)
+2020-10-21 13:08:26 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "USER" not found; SQL statement:
+ALTER TABLE USER RENAME TO USERS [42102-196]

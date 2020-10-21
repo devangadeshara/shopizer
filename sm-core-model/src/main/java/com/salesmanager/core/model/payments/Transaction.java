@@ -79,8 +79,7 @@ public class Transaction extends SalesManagerEntity<Long, Transaction> implement
 	@Enumerated(value = EnumType.STRING)
 	private PaymentType paymentType;
 	
-	@Column(name="DETAILS")
-	@Type(type = "org.hibernate.type.TextType")
+	@Column(name="DETAILS",length=4000)
 	private String details;
 	
 	@Transient

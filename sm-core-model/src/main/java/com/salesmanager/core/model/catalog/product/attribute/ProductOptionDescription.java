@@ -31,8 +31,7 @@ public class ProductOptionDescription extends Description {
 	@JoinColumn(name = "PRODUCT_OPTION_ID", nullable = false)
 	private ProductOption productOption;
 	
-	@Column(name="PRODUCT_OPTION_COMMENT")
-	@Type(type = "org.hibernate.type.TextType")
+	@Column(name="PRODUCT_OPTION_COMMENT", length=4000)	
 	private String productOptionComment;
 	
 	public ProductOptionDescription() {

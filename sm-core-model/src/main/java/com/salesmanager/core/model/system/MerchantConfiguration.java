@@ -66,8 +66,7 @@ public class MerchantConfiguration extends SalesManagerEntity<Long, MerchantConf
   private Boolean active = new Boolean(false);
 
 
-  @Column(name = "VALUE")
-  @Type(type = "org.hibernate.type.TextType")
+  @Column(name = "VALUE", length=4000)
   private String value;
 
   @Column(name = "TYPE")

@@ -51,8 +51,7 @@ public class OrderStatusHistory implements Serializable {
 	@Column(name = "CUSTOMER_NOTIFIED")
 	private java.lang.Integer customerNotified;
 	
-	@Column(name = "COMMENTS")
-	@Type(type = "org.hibernate.type.TextType")
+	@Column(name = "COMMENTS", length=4000)
 	private String comments;
 	
 	public OrderStatusHistory() {

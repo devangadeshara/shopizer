@@ -72,8 +72,7 @@ public class CustomerOptin extends SalesManagerEntity<Long, CustomerOptin> imple
 	@Column(name="EMAIL", nullable=false)
 	private String email;
 	
-	@Column(name="VALUE")
-	@Type(type = "org.hibernate.type.TextType")
+	@Column(name="VALUE", length=4000)
 	private String value;
 
 	@Override
