@@ -73,7 +73,7 @@
 		<drools.version>7.20.0.Final</drools.version>
 		<google-client-maps-services-version>0.1.6</google-client-maps-services-version>
 		<jwt.version>0.8.0</jwt.version>
-
+		<oracle-jdbc-version>19.7.0.0</oracle-jdbc-version>
 
 		<!-- api documentation -->
 		<swagger.version>2.9.2</swagger.version>
@@ -218,6 +218,11 @@
 				<artifactId>mysql-connector-java</artifactId>
 				<version>${mysql-jdbc-version}</version>
 			</dependency>
+			<dependency>
+				 <groupId>com.oracle.database.jdbc</groupId>
+				 <artifactId>ojdbc8</artifactId>
+				 <version>${oracle-jdbc-version}</version>
+            </dependency>
 
 			<!-- Google Map API -->
 			<dependency>
