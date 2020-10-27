@@ -56,7 +56,7 @@ import com.salesmanager.shop.utils.DateUtil;
 import com.salesmanager.shop.utils.ImageFilePath;
 
 @Service("productFacade")
-@Profile({ "default", "cloud", "gcp", "aws", "mysql" , "docker-compose" })
+@Profile({ "default", "cloud", "gcp", "aws", "mysql" })
 public class ProductFacadeImpl implements ProductFacade {
 
 	@Inject
