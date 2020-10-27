@@ -45,7 +45,8 @@ import com.salesmanager.core.model.customer.Customer;
 import com.salesmanager.core.model.generic.SalesManagerEntity;
 import com.salesmanager.core.model.merchant.MerchantStore;
 import com.salesmanager.core.model.tax.taxclass.TaxClass;
-
+import com.salesmanager.core.utils.BooleanConverter;
+import javax.persistence.Convert;
 
 @Entity
 @EntityListeners(value = AuditListener.class)
@@ -110,11 +111,13 @@ public class Product extends SalesManagerEntity<Long, Product> implements Audita
 	private Date dateAvailable = new Date();
 	
 	
-	@Column(name = "AVAILABLE", columnDefinition = "boolean default true", nullable = false)
+	@Column(name = "AVAILABLE", columnDefinition = "varchar2(5) default 'TRUE'", nullable = false)
+	@Convert(converter = BooleanConverter.class)
 	private Boolean available = true;
 	
 
-	@Column(name = "PREORDER", columnDefinition = "boolean default false", nullable = false)
+	@Column(name = "PREORDER", columnDefinition = "varchar2(5) default 'FALSE'", nullable = false)
+	@Convert(converter = BooleanConverter.class)
 	private Boolean preOrder = false;
 	
 
@@ -130,14 +133,17 @@ public class Product extends SalesManagerEntity<Long, Product> implements Audita
 	@JoinColumn(name="TAX_CLASS_ID", nullable=true)
 	private TaxClass taxClass;
 
-	@Column(name = "PRODUCT_VIRTUAL", columnDefinition = "boolean default false", nullable = false)
+	@Column(name = "PRODUCT_VIRTUAL", columnDefinition = "varchar2(5) default 'FALSE'", nullable = false)
+	@Convert(converter = BooleanConverter.class)
 	private boolean productVirtual = false;
 	
-	@Column(name = "PRODUCT_SHIP", columnDefinition = "boolean default false", nullable = false)
+	@Column(name = "PRODUCT_SHIP", columnDefinition = "varchar2(5) default 'FALSE'", nullable = false)
+	@Convert(converter = BooleanConverter.class)
 	private Boolean productShipeable = false;
 
 
-	@Column(name = "PRODUCT_FREE", columnDefinition = "boolean default false", nullable = false)
+	@Column(name = "PRODUCT_FREE", columnDefinition = "varchar2(5) default 'FALSE'", nullable = false)
+	@Convert(converter = BooleanConverter.class)
 	private boolean productIsFree;
 
 	@Column(name = "PRODUCT_LENGTH")
